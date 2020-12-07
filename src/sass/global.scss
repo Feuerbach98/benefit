@@ -1,0 +1,16 @@
+@import './carousel.scss';
+
+$g-max-width: 1820px;
+$g-padding-value: 100px;
+$g-padding: 0 $g-padding-value;
+$g-transition: 0.2s;
+
+$gray: #A0A0A0;
+$pink: #F94877;
+$light-pink: #FC104F;
+$red: #F44336;
+
+p,
+h2 {
+  margin: 0;
+}

@@ -1,0 +1,60 @@
+@import '../../sass/global.scss';
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+
+  font-family: 'Bebas Neue', cursive;
+  font-size: 18px;
+
+  padding-left: $g-padding-value;
+  margin-right: $g-padding-value;
+
+  border-top: solid 1px #222;
+  border-bottom: solid 2px #c4c4c4;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    border: none;
+  }
+
+  &__link {
+    display: block;
+    padding: 8px;
+    margin: 5px;
+
+    text-decoration: none;
+    color: inherit;
+
+    transition: color $g-transition;
+
+    &:hover {
+      color: $gray;
+    }
+
+    &:last-child {
+      padding-right: 0;
+      margin-right: 0;
+    }
+
+    &--columns {
+      margin: 3px 3px 3px 0;
+      padding: 2px 2px 2px 0;
+
+      &:first-child {
+        padding-left: 0;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &--columns {
+    display: block;
+    columns: 2 auto;
+
+    padding: 0;
+    margin: 0;
+    
+    border: none;
+  }
+}

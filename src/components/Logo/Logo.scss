@@ -1,0 +1,13 @@
+@import '../../sass/global.scss';
+
+.logo {
+  display: block;
+  
+  @media (max-width: 1024px) {
+    max-height: 50px;
+  }
+
+  @media (max-width: 400px) {
+    max-height: 35px;
+  }
+}

@@ -1,0 +1,264 @@
+@import '../../sass/global.scss';
+
+.black-line {
+  position: absolute;
+  left: 0;
+  height: 40px;
+  width: 100%;
+  background-color: #333;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.header {
+  &__top {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: $g-padding;
+
+    height: 40px;
+
+    font-size: 13px;
+    color: $gray;
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    @media (max-width: 400px) {
+      height: 35px;
+    }
+  }
+
+  &__region {
+    color: white;
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__region-option {
+    color: #333;
+  }
+
+  &__region-label {
+    color: $gray;
+    margin-right: 10px;
+  }
+
+  &__link {
+    margin-left: 75px;
+
+    text-decoration: none;
+    color: inherit;
+
+    transition: color $g-transition;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  &__nav {
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+}
+
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+  padding: $g-padding;
+  margin: 14px 0;
+
+  color: $gray;
+
+  @media (max-width: 1024px) {
+    align-items: center;
+    padding: 5px 10px;
+    margin: 0;
+    border-bottom: 1px solid #222;
+  }
+
+  &__contacts {
+    display: flex;
+    width: 33.33%;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 1024px) {
+      order: 2;
+      width: auto;
+    }
+
+    @media (max-width: 620px) {
+      display: none;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 85px;
+    width: 33.33%;
+
+    @media (max-width: 1400px) {
+      gap: 40px;
+    }
+
+    @media (max-width: 1024px) {
+      order: 3;
+      gap: 0;
+      width: auto;
+    }
+  }
+}
+
+.header-button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+  border: none;
+  outline: none;
+  background: none;
+
+  &:first-child {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  &:nth-child(2) {
+    @media (max-width: 620px) {
+      display: none;
+    }
+  }
+
+  &:last-child {
+    padding-right: 0;
+    margin-right: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover .header-button__icon-wrapper {
+    background-color: $light-pink;
+  }
+
+  &:hover .header-button__text {
+    color: black;
+  }
+
+  &:hover .header-button__icon-wrapper--transparent {
+    background-color: transparent;
+  }
+
+  &:hover .header-button__icon-wrapper--transparent .header-button__search {
+    transform: scale(1.1);
+  }
+
+  &__icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    background-color: $pink;
+
+    transition: background-color $g-transition;
+  }
+
+  &__icon-wrapper--transparent {
+    background-color: transparent;
+    transition: transform $g-transition;
+  }
+
+  &__text {
+    color: $gray;
+    margin-top: 8px;
+    transition: color $g-transition;
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__search {
+    transition: transform $g-transition;
+  }
+}
+
+.menu-toggler {
+  position: relative;
+  z-index: 101;
+
+  display: none;
+
+  width: 30px;
+  height: 21px;
+
+  outline: none;
+  border: none;
+  background: no-repeat url(../../images/menu.png);
+  transition: background-image $g-transition;
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--opened {
+    position: fixed;
+    height: 30px;
+    background-image: url(../../images/cross-sign.svg);
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  overflow-y: scroll;
+  
+  width: 80%;
+  height: 100vh;
+
+  padding-top: 20px;
+
+  color: white;
+
+  background-color: $pink;
+
+  animation: menu $g-transition;
+}
+
+@keyframes menu {
+  from { left: -100%; }
+  to { left: 0; }
+}

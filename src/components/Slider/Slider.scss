@@ -1,0 +1,12 @@
+.slider {
+  margin-bottom: 20px;
+
+  &__slide {
+    width: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    margin: 0 -10px;
+  }
+
+}

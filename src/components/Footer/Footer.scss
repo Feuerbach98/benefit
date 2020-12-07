@@ -1,0 +1,130 @@
+@import '../../sass/global.scss';
+
+.footer {
+  padding: 30px $g-padding-value 10px;
+
+  @media (max-width: 1024px) {
+    padding: 30px 10px 10px;
+  }
+
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+
+    @media (max-width: 415px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__button {
+    display: none;
+    gap: 5px;
+
+    font-family: 'Bebas Neue';
+    font-size: 24px;
+
+    border: none;
+    background: transparent;
+    outline: none;
+
+    transition: color $g-transition;
+
+    @media (max-width: 415px) {
+      display: flex;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: $gray;
+    }
+  }
+
+  &__additional--desktop {
+    @media (max-width: 415px) {
+      display: none;
+    }
+  }
+
+  &__additional-link {
+    display: block; 
+    padding: 2px;
+    margin: 3px;
+
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+
+    transition: color $g-transition;
+
+    &:hover {
+      color: $gray;
+    }
+  }
+
+  &__contacts {
+    @media (max-width: 869px) {
+      order: 4;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: flex-start;
+
+    @media (max-width: 415px) {
+      justify-content: center;
+      order: 1;
+    }
+  }
+
+  &__bottom {
+    margin-top: 50px;
+  }
+
+  &__bottom-text {
+    font-size: 12px;
+    color: gray;
+
+    @media (max-width: 415px) {
+      padding: 15px;
+      text-align: center;
+    }
+  }
+
+  &__navigation {
+    @media (max-width: 415px) {
+      display: none;
+    }
+  }
+
+  &__link {
+    color: $pink;
+    text-decoration: none;
+  }
+}
+
+.pay {
+  margin: 3px;
+  padding: 2px;
+
+  &__title {
+    font-size: 14px;
+    color: $gray;
+  }
+
+  &__images {
+    display: flex;
+    align-items: center;;
+    gap: 50px;
+
+    margin-top: 15px;
+
+    @media (max-width: 415px) {
+      justify-content: center;
+    }
+  }
+}
