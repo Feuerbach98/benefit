@@ -1,0 +1,46 @@
+@import '../../sass/global.scss';
+
+.brands {
+  // overflow: hidden;
+
+  &__title {
+    position: relative;
+    top: 1px;
+
+    display: inline-block;
+    border-bottom: 1px solid #222;
+
+    margin-top: 40px;
+    padding-bottom: 10px;
+
+    font-weight: normal;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+
+  &__brands-box {
+    box-sizing: content-box;
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+
+    padding-top: 10px;
+    border-top: 1px solid $gray;
+
+    @media (max-width: 1200px) {
+      display: grid;
+      justify-items: center;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 420px) {
+      grid-template-columns: 1fr;
+    }
+  } 
+}

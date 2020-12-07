@@ -1,0 +1,85 @@
+@import '../../sass/global.scss';
+
+.get-in-touch {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 20px;
+  color: $gray;
+
+  &--top {
+    @media (max-width: 1024px) {
+      display: block;
+    }
+  }
+
+  &--column {
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media (max-width: 415px) {
+      align-items: center;
+    }
+  }
+
+  &__number {
+    display: inline-block;
+    margin: 5px 0;
+
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color $g-transition;
+
+    &--top {
+      @media (max-width: 1024px) {
+        font-size: 14px;
+      }
+    }
+
+    &:hover {
+      border-color: black;
+    }
+  }
+
+  &__schedule {
+    font-size: 12px;
+
+    &--top {
+      @media (max-width: 1024px) {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+
+    border-bottom: 1px solid transparent;
+    transition: border-color $g-transition, color $g-transition;
+
+    &--top {
+      @media (max-width: 1024px) {
+        font-size: 12px;
+      }
+    }
+
+    &:hover {
+      border-color: black;
+    }
+
+    &--column {
+      padding: 7px 33px;
+      margin-top: 35px;
+      border: 1px solid $pink;
+
+      &:hover {
+        border-color: $light-pink;
+        color: $light-pink;
+      }
+    }
+  }
+}

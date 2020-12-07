@@ -1,0 +1,89 @@
+@import '../../sass/global.scss';
+
+.popular {
+  &__title {
+    position: relative;
+    top: 1px;
+    
+    display: inline-block;
+    border-bottom: 1px solid #222;
+
+    padding-bottom: 10px;
+    
+    font-weight: normal;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+
+  &__card-box-desktop {
+    display: block;
+
+    border-top: 1px solid $gray;
+
+    @media (max-width: 1133px) {
+      display: none;
+    }
+  }
+
+  &__card-box-mobile {
+    display: none;
+
+    border-top: 1px solid $gray;
+
+    @media (max-width: 1133px) {
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+      justify-items: center;
+    }
+
+    @media (max-width: 1034px) {
+      grid-template-columns: 50% 50%;
+    }
+
+    @media (max-width: 590px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.carousel {
+  &__right-arrow {
+    position: absolute;
+    z-index: 1;
+    width: 40px;
+    height: 80px;
+    right: 0;
+
+    border: none;
+    outline: none;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../../images/right.png), linear-gradient(269.13deg, rgba(255, 255, 255, 0) -63.21%, #FFFFFF 60.05%);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__left-arrow {
+    position: absolute;
+    z-index: 1;
+    width: 40px;
+    height: 80px;
+    left: 0;
+
+    border: none;
+    outline: none;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../../images/left.png), linear-gradient(269.13deg, rgba(255, 255, 255, 0) -63.21%, #FFFFFF 60.05%);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
